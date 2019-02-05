@@ -3,8 +3,8 @@ const { parse } = require('url')
 module.exports = (req, res) => {
   const { query } = parse(req.url, true)
   const { text } = query;
-
   let msg;
+
   switch (text) {
     case 'ggr':
       msg = `Googleで調べれば解決できそうです！ :google: いい機会なので調べてみてください！`;
@@ -21,7 +21,7 @@ module.exports = (req, res) => {
       ggr: Googleで調べましょう
       `
     default:
-      msg = `コマンドが見つかりません ${query} ${JSON.stringify(query)}`;
+      msg = `コマンドが見つかりません`;
   }
   res.end(msg);
 }
