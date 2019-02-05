@@ -1,9 +1,9 @@
 const express = require('express')
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 const app = express()
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('*', (req, res) => {
   const text = req.body && req.body.text
@@ -11,7 +11,7 @@ app.get('*', (req, res) => {
 
   switch (text) {
     case 'ggr':
-      msg = `Googleで調べれば解決できそうです！ :google: いい機会なので調べてみてください！`;
+      msg = `Googleで調べれば解決できそうです！ :google: いい機会なので調べてみてください！`
       break;
     case 'doc':
       msg = `
@@ -25,7 +25,7 @@ app.get('*', (req, res) => {
       ggr: Googleで調べましょう
       `
     default:
-      msg = `コマンドが見つかりません`;
+      msg = `コマンドが見つかりません`
   }
 
   res.end(msg)
