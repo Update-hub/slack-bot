@@ -1,10 +1,5 @@
-const { parse } = require('url')
-
 module.exports = (req, res) => {
-  const { query } = parse(req.url, true)
-  const { text } = query
-
-  console.log(req);
+  const { text } = req.body;
 
   let msg;
   switch (text) {
