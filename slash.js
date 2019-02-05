@@ -5,6 +5,9 @@ module.exports = (req, res) => {
   const { text } = query;
   let msg;
 
+  console.log(req);
+  console.log(query);
+
   switch (text) {
     case 'ggr':
       msg = `Googleで調べれば解決できそうです！ :google: いい機会なので調べてみてください！`;
