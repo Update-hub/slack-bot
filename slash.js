@@ -30,7 +30,10 @@ app.get('*', upload.array(), (req, res) => {
       msg = `コマンドが見つかりません`
   }
 
-  res.send(msg)
+  res.json({
+    response_type: 'in_channel',
+    text: msg
+  })
 })
 
 module.exports = app
