@@ -20,7 +20,7 @@ module.exports = (req, res) => {
       ggr: Googleで調べましょう
       `
     default:
-      msg = 'コマンドが見つかりません';
+      msg = `コマンドが見つかりません ${JSON.stringify(query)}`;
   }
-  res.end(query)
+  res.end(msg);
 }
