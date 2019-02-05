@@ -7,7 +7,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('*', upload.array(), (req, res) => {
-  const text = req.body && req.body.text
+  const text = req.body.text
   let msg
 
   switch (text) {
