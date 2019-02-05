@@ -3,6 +3,7 @@ const app = express()
 
 app.get('*', (req, res) => {
   const text = req.body.text;
+  let msg;
 
   switch (text) {
     case 'ggr':
