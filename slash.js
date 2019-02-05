@@ -29,6 +29,12 @@ doc: ドキュメントで調べましょう
 ggr: Googleで調べましょう
       `
       break
+    case 'dev':
+      msg = `
+botの開発にご協力ください！PRお待ちしています:male-technologist::skin-tone-2:
+:github: https://github.com/Update-hub/slack-bot
+      `
+      break
     default:
       msg = `コマンドが見つかりません`
   }
