@@ -30,7 +30,7 @@ app.get('*', upload.array(), (req, res) => {
       msg = `コマンドが見つかりません`
   }
 
-  res.end(msg)
+  res.send(msg)
 })
 
 module.exports = app
