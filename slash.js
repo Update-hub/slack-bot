@@ -40,6 +40,7 @@ botの開発にご協力ください！PRお待ちしています:male-technolog
   }
 
   res.json({
+    response_type: 'in_channel',
     text: msg
   })
 })
