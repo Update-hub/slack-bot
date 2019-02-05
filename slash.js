@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('*', (req, res) => {
+app.post('*', (req, res) => {
   const text = req.body.text
   let msg
 
