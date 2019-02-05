@@ -1,12 +1,8 @@
-const { parse } = require('url')
+const express = require('express')
+const app = express()
 
-module.exports = (req, res) => {
-  const { query } = parse(req.url, true)
-  const { text } = query;
-  let msg;
-
-  console.log(req);
-  console.log(query);
+app.get('*', (req, res) => {
+  const text = req.body.text;
 
   switch (text) {
     case 'ggr':
@@ -26,5 +22,8 @@ module.exports = (req, res) => {
     default:
       msg = `コマンドが見つかりません`;
   }
-  res.end(msg);
-}
+
+  res.end(msg)
+})
+
+module.exports = app
