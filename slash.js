@@ -22,5 +22,5 @@ module.exports = (req, res) => {
     default:
       msg = 'コマンドが見つかりません';
   }
-  res.end(msg)
+  res.end(query)
 }
