@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('*', (req, res) => {
-  const text = req.body.text;
+  const text = req.body && req.body.text && null;
   let msg;
 
   switch (text) {
