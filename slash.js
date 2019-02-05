@@ -1,12 +1,10 @@
 const app = require('express')()
 const bodyParser = require('body-parser')
-const multer = require('multer')
-const upload = multer()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('*', upload.array(), (req, res) => {
+app.get('*', (req, res) => {
   const text = req.body.text
   let msg
 
